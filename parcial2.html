@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PARCIAL2_dw1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">PARCIAL_2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Layout -->
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h5>Sección Principal</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content flex-grow-1">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+        <!-- CARD -->
+        <div class="col" id="card1">
+          <div class="card h-100">
+            <img src="img/imagen.1.jpg" class="card-img-top" alt="Imagen 1">
+            <div class="card-body">
+            <h5 class="card-title">BRO?</h5>
+              <p class="card-text">no se que poner en este lado</p>
+              <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal1">Ver más</button>
+              <!-- Contador B -->
+                <div class="counter-container">
+                    <span class="counter-value" id="counter1">0</span>
+                    <div class="counter-buttons">
+                    <button class="btn btn-sm btn-success" onclick="increment('counter1')">+</button>
+                    <button class="btn btn-sm btn-warning" onclick="decrement('counter1')">-</button>
+                    <button class="btn btn-sm btn-danger" onclick="reset('counter1')">⟳</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- CARD 2 -->
+        <div class="col" id="card2">
+          <div class="card h-100">
+            <img src="img/imagen.2.jpg" class="card-img-top" alt="Imagen 2">
+            <div class="card-body">
+              <h5 class="card-title">BRO2?</h5>
+              <p class="card-text">Espero y este bien la pagina</p>
+              <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal2">Ver más</button>
+                <div class="counter-container">
+                    <span class="counter-value" id="counter2">0</span>
+                    <div class="counter-buttons">
+                    <button class="btn btn-sm btn-success" onclick="increment('counter2')">+</button>
+                    <button class="btn btn-sm btn-warning" onclick="decrement('counter2')">-</button>
+                    <button class="btn btn-sm btn-danger" onclick="reset('counter2')">⟳</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="col" id="card3">
+          <div class="card h-100">
+            <img src="img/imagen.3.jpg" class="card-img-top" alt="Imagen 3">
+            <div class="card-body">
+              <h5 class="card-title">ASSH<h5>
+              <p class="card-text">Descripción breve del contenido </p>
+              <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modal3">Ver más</button>
+              <div class="counter-container">
+                <span class="counter-value" id="counter3a">0</span>
+                <div class="counter-buttons">
+                  <button class="btn btn-sm btn-success" onclick="increment('counter3a')">+</button>
+                  <button class="btn btn-sm btn-warning" onclick="decrement('counter3a')">-</button>
+                  <button class="btn btn-sm btn-danger" onclick="reset('counter3a')">⟳</button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODALES -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal1Label">EHHHHHHHHHHHHHHHHH</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">Contenido ampliado de la primera tarjeta en modal.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">no se que poner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">Contenido ampliado de la segunda tarjeta.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">Espero que este bien.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
